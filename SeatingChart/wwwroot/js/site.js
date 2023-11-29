@@ -35,6 +35,8 @@ function createGrid() {
     grid = new ej.grids.Grid({
         dataSource: data,
         columns: cols,
+        allowTextWrap: true,
+        textWrapSettings: { wrapMode: 'content' },
         editSettings: {allowEditing: true},
         gridLines: 'Both',
         selectionSettings: {mode: 'Cell', cellSelectionMode: 'Box'},
