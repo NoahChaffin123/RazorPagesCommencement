@@ -15,20 +15,32 @@
     <script src="https://cdn.syncfusion.com/ej2/17.1.43/dist/ej2.min.js"></script>
 </head>
 <body>
+
+
+
+
     <script>
-        var student_list = @Html.Raw(Json.Serialize(Model.Students));  
-        
-        
+        var student_list = @Html.Raw(Json.Serialize(Model.Students)); 
+           
     </script>
+
+
+
+
+
     <button id="addRowBtn">Add Row</button>
     <button id="deleteRowBtn">Delete Row</button>
     <button id="addColumnBtn">Add Column</button>
-    <button id="deleteColumnBtn">Delete Column</button>
+    <button id="deleteColumnBtn">Delete Column</button> 
+    <button id="saveBtn">Saving</button>
     <div id="Grid"></div>
 
     <script>
-       
-    </script> 
+     //Return JSON via a function.  
+     //Razor pages identity for log in.  
+
+     
+    </script>  
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

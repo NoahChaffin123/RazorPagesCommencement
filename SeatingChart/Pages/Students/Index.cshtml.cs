@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using SeatingChart;
+using System.Collections;
 
 namespace SeatingChart.Pages.Students
 {
@@ -26,7 +27,9 @@ namespace SeatingChart.Pages.Students
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
-        public PaginatedList<Student> Students { get; set; }
+       //  public PaginatedList<Student> Students { get; set; } 
+
+        public List<Student> Students { get; set; }
 
         public async Task OnGetAsync(string sortOrder,
             string currentFilter, string searchString, int? pageIndex)
@@ -63,9 +66,10 @@ namespace SeatingChart.Pages.Students
             } 
         
 
-            var pageSize = Configuration.GetValue("PageSize", 4);
-            Students = await PaginatedList<Student>.CreateAsync(
-                studentsIQ.AsNoTracking(), pageIndex ?? 1, pageSize);
+            // var pageSize = Configuration.GetValue("PageSize", 4);
+            // Students = await PaginatedList<Student>.CreateAsync(
+                // studentsIQ.AsNoTracking(), pageIndex ?? 1, pageSize);
+            Students = studentsIQ.ToList();
         }
     }
 }

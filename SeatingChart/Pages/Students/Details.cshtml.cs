@@ -23,6 +23,7 @@ namespace SeatingChart.Pages.Students
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            return new JsonResult("test");
             if (id == null)
             {
                 return NotFound();
