@@ -1,5 +1,6 @@
 @page
 @model SeatingChart.Pages.Students.IndexModel
+@using SeatingChart.Models;
 
 @{
     ViewData["Title"] = "Primary Seating Chart";
@@ -79,7 +80,16 @@
     @*<div id="Grid"></div>*@ 
 
     
-    <div class="wrapper">        
+    <div class="wrapper">
+        @for(var i = 0; i < @Model.numCols; i++) {
+            Student faculty = new Student();
+            <div class="item">
+                @faculty.FirstName @faculty.MiddleName @faculty.LastName
+                <div class="buttons">
+                    <a href="/Students/Edit/?id=@faculty.ID">Edit</a>
+                </div>
+            </div>
+        }
         @foreach (var student in Model.Students) {
             <div class="item">
                 @student.FirstName @student.MiddleName @student.LastName
