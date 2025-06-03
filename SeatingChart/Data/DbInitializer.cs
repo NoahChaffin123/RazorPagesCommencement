@@ -22,7 +22,6 @@ namespace SeatingChart.Data
                     new Student{FirstName="Tanner", MiddleName="G", LastName="Barret"},
                     new Student{FirstName="Joseph", MiddleName="Stanley", LastName="Beard"},
                     new Student{FirstName="Cody", MiddleName="Gail", LastName="Beckett"},
-                    new Student{FirstName="Farah", MiddleName="Mackenzie", LastName="Bell"},
                     new Student{FirstName="Jayson", MiddleName="L", LastName="Gibson"},
                     new Student{FirstName="Madison", MiddleName="Ragon", LastName="Connaway"},
                     new Student{FirstName="Brandon", MiddleName="Issac", LastName="Kutris"}
